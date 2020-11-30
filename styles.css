@@ -1,0 +1,13 @@
+:root {
+    /* Primary Colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-gray-blue: hsl(227, 10%, 46%);
+    /* neutral colors */
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    background-color: var(--dark-cyan);
+    background-image: url(./images/bg-pattern-bottom.svg);
+}
