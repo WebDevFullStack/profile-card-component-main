@@ -1,25 +1,117 @@
 :root {
+    /* COLORS */
     /* Primary Colors */
     --dark-cyan: hsl(185, 75%, 39%);
     --dark-desaturated-blue: hsl(229, 23%, 23%);
     --dark-gray-blue: hsl(227, 10%, 46%);
-    /* neutral colors */
+    /* Neutral colors */
     --dark-gray: hsl(0, 0%, 59%);
+    /* Misc. */
+    /* gradient size adjust */
+    --transparent-gradient: 13%;
 }
 
 body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: left 50%, right -60%;
     background-color: var(--dark-cyan);
-    background-image: url(./images/bg-pattern-bottom.svg);
+}
+
+
+/* Card section */
+
+.card {
+    margin: auto;
+    margin-top: 10vw;
+    border-radius: 10px;
+    width: 80%;
+    height: fit-content;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 2px 5px 18px 6px rgba(0, 0, 0, 0.48);
+}
+
+.profile-pic {
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
+.card-top {
+    height: 150px;
+    width: 100%;
+    background-image: url(images/bg-pattern-card.svg);
+}
+
+.card-content {
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 0) var(--transparent-gradient), rgba(255, 255, 255, 1) var(--transparent-gradient));
+    margin: -55px;
+    height: 320px;
+}
+
+.card-bottom {
+    border-top: 1px solid rgba(128, 128, 128, 0.219);
+    padding-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+
+/* Cards content */
+
+.name {
+    margin-top: 15px;
+}
+
+.age {
+    padding-left: 8px;
+}
+
+.location {
+    margin: 10px 0 15px;
+}
+
+.amount {
+    padding-top: 3px 0 3px;
+}
+
+
+/* font colors */
+
+.light-gray {
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.bolded {
+    font-weight: 700;
 }
 
 
 /* Frontmentor styles */
 
 .attribution {
+    position: absolute;
+    display: flex;
+    bottom: 0;
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 400px;
+    }
 }
